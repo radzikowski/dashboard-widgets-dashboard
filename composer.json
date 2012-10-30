@@ -1,0 +1,17 @@
+{
+    "name": "newscoop/dashboard-widgets-dashboard",
+    "description": "Newscoop dashboard widgets dashboard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pawel Mikolajczuk",
+            "email": "mikolajczuk.private@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex":                  "1.0.*",
+        "newscoop/dashboard-widgets":   "*",
+        "newscoop/hello-world-widget":  "*"
+    },
+    "minimum-stability" : "dev"
+}
