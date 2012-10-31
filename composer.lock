@@ -4,15 +4,16 @@
         {
             "name": "newscoop/dashboard-widgets",
             "version": "dev-master",
+            "target-dir": "Newscoop/Widgets",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ahilles107/dashboard-widgets",
-                "reference": "9cff42a7e98090c66ecf25f14b58f3291d7629e0"
+                "reference": "c2d40f0bfcc3b0b4f50f2928ad5b8932c9b33c05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/ahilles107/dashboard-widgets/zipball/9cff42a7e98090c66ecf25f14b58f3291d7629e0",
-                "reference": "9cff42a7e98090c66ecf25f14b58f3291d7629e0",
+                "url": "https://github.com/ahilles107/dashboard-widgets/zipball/c2d40f0bfcc3b0b4f50f2928ad5b8932c9b33c05",
+                "reference": "c2d40f0bfcc3b0b4f50f2928ad5b8932c9b33c05",
                 "shasum": ""
             },
             "require": {
@@ -24,16 +25,15 @@
                 "symfony/http-kernel": "2.1.*",
                 "symfony/routing": "2.1.*",
                 "symfony/yaml": "2.1.*",
-                "twig/twig": "1.*"
+                "twig/twig": "1.*",
+                "php": ">=5.3.3"
             },
-            "time": "1351637902",
+            "time": "1351689472",
             "type": "library",
             "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Newscoop\\Widgets": [
-                        "src"
-                    ]
+                    "Newscoop\\Widgets": ""
                 }
             },
             "license": [
