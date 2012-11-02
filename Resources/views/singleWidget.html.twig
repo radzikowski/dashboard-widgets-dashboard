@@ -1,9 +1,16 @@
-<div class="single-widget" id="{{ widget.info.widgetName }}">
-    <div class="header">
-        <ul class="meta">
-            {% for key, meta in widget.meta %}
-                <li>{{ key }}: {{ meta }}</li>
-            {% endfor %}
-        </ul>
+<div class="single-widget" id="{{ widget.info.widgetName }}" data-url="{{ container.get('dashboard.router').generator.generate(widget.defaultRoute, true) }}">
+    <div class="widget-header">
+        <div class="widget-title">{{ widget.meta.title }}</div>
+        <div class="widget-icons">
+            <div class="widget-meta icon-info-sign icon-white"></div>
+        </div>
+        <div class="widget-meta-details">
+            <ul class="unstyled">
+                {% for key, meta in widget.meta %}
+                    <li><label>{{ key }}:</label> {{ meta }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+    <div class="widget-content"></div>
 </div>

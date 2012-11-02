@@ -6,12 +6,38 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="Resources/public/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="Resources/public/css/style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     </head>
     <body>
         <h2>Dashboard widgets</h2>
 
+        <div class="widgets-container">
         {% for class, widget in allWidgets %}
-            {% include "Resources/views/singleWidget.html.twig" with {'widget' : widget} %}
+            {% include "Resources/views/singleWidget.html.twig" with {'widget' : widget, 'container': container} %}
         {% endfor %}
+        </div>
+
+        <script type="text/javascript">
+            $('.widgets-container .single-widget .widget-header .widget-icons .widget-meta').click(function(){
+                if ($('.widget-meta-details:visible').length > 0) {
+                    $('.widget-meta-details').hide();
+                } else {
+                    $('.widget-meta-details').show();
+                }
+            });
+
+            $('.widgets-container .single-widget').each(function(i, e){
+                $.ajax({
+                  url: 'widgets.php'+$(e).data('url'),
+                  type: "POST",
+                  data: {id : 'test'},
+                  dataType: "html"
+                }).done(function(res){
+                    $('.widget-content', e).html(res);
+                });
+            });
+        </script>
     </body>
 </html>

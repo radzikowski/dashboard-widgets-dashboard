@@ -10,7 +10,11 @@ $containerFactory = new ContainerFactory(__DIR__, __DIR__.'/app/cache/',  __DIR_
 $container = $containerFactory->getContainer();
 $widgetReader = new WidgetReader($container->getParameter('dashboard.widgets_dir'));
 
+$routingLoader = $container->get('dashboard.routing.yml_loader');
+$widgetReader->registerRoutings($routingLoader, $containerFactory);
+$router = $container->get('dashboard.router');
+
 $view = $container->get('dashboard.view');
 $allWidgets = $widgetReader->findAllWidgets();
 
-echo $view->render('Resources/views/widgetsDashboard.html.twig', array('allWidgets' => $allWidgets));
+echo $view->render('Resources/views/widgetsDashboard.html.twig', array('allWidgets' => $allWidgets, 'container' => $container ));

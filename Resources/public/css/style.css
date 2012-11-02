@@ -1,0 +1,52 @@
+.widgets-container {
+    padding: 0px 10px;
+}
+.widgets-container .single-widget {
+    float:left;
+    border: 1px solid #ccc;
+    width: 350px;
+}
+.widgets-container .single-widget .widget-header {
+    background-color: #0088cc;
+    color: #FFF;
+    height: 20px;
+    position: relative;
+}
+
+.widgets-container .single-widget .widget-header .widget-meta-details {
+    position: absolute;
+    right: 0px;
+    top: 25px;
+    width: 115px;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 10px;
+    background-color: #0088cc;
+    color: #FFF;
+    padding: 0px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display:none;
+}
+
+.widgets-container .single-widget .widget-header .widget-title{
+    float: left;
+    padding: 0px 5px;
+}
+
+.widgets-container .single-widget .widget-header .widget-icons{
+    float: right;
+    padding: 0px 3px;
+    cursor: pointer;
+}
+
+.widgets-container .single-widget .widget-header .widget-meta-details ul {}
+.widgets-container .single-widget .widget-header .widget-meta-details ul li label{ 
+    font-size: 12px; 
+    margin-bottom: 0px; 
+}
+
+.widgets-container .single-widget .widget-content {
+    min-height: 200px;
+}
