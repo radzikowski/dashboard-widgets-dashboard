@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\HttpKernel;
 use Symfony\Component\HttpKernel\EventListener\RouterListener;
 use Newscoop\Widgets\Controller\ControllerResolver;
 use Newscoop\Widgets\Container\ContainerFactory;
-use Newscoop\Widgets\WidgetReader;
+use Newscoop\Widgets\Widget\WidgetReader;
 
 $containerFactory = new ContainerFactory(__DIR__, __DIR__.'/app/cache', __DIR__ . '/widgets');
 $container = $containerFactory->getContainer();

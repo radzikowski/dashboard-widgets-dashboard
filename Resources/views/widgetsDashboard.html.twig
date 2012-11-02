@@ -1,1 +1,17 @@
-<h2>Dashboard widgets</h2>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h2>Dashboard widgets</h2>
+
+        {% for class, widget in allWidgets %}
+            {% include "Resources/views/singleWidget.html.twig" with {'widget' : widget} %}
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<div class="single-widget" id="{{ widget.info.widgetName }}">
+    <div class="header">
+        <ul class="meta">
+            {% for key, meta in widget.meta %}
+                <li>{{ key }}: {{ meta }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
