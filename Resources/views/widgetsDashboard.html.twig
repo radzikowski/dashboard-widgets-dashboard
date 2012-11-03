@@ -32,7 +32,7 @@
                 $.ajax({
                   url: 'widgets.php'+$(e).data('url'),
                   type: "POST",
-                  data: {id : 'test'},
+                  data: $(e).data(),
                   dataType: "html"
                 }).done(function(res){
                     $('.widget-content', e).html(res);

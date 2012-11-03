@@ -44,9 +44,11 @@
 .widgets-container .single-widget .widget-header .widget-meta-details ul {}
 .widgets-container .single-widget .widget-header .widget-meta-details ul li label{ 
     font-size: 12px; 
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
+    display: inline;
 }
 
 .widgets-container .single-widget .widget-content {
     min-height: 200px;
+    padding: 5px;
 }
