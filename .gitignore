@@ -1,14 +1,5 @@
-# Bootstrap
-app/bootstrap*
-
-# Symfony directories
-vendor/*
-*/logs/*
 */cache/*
-web/uploads/*
-web/bundles/*
+composer.lock
 
-# Configuration files
-app/config/parameters.ini
-
+vendor/*
 widgets/*
